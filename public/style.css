@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Inconsolata', monospace;
+}
+
+body{
+    color: #519975;
+    background: #211D1B;
+    padding: 15px 20px;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Welcome Text */
+.hello-txt {
+   display: block;
+   margin: 0;
+   position: absolute;
+   top: 40px;
+   left: 10px;
+}
+
+/* Logo */
+.art{
+    position: relative;
+    font-family: monospace;
+    white-space: pre;
+    margin-top: 30px;
+    margin-left: 0;
+    font-size: 1.5em;
+}
+
+/* The instructions text */
+.txtt {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 0.05em; 
+    width: max-content;
+}
+
+/* Text animation */
+.welcome-txt {
+    position: relative;
+    padding-bottom: 0.4em;
+    color: 	#DB6A6C;
+}
+
+.welcome-txt::before,
+.welcome-txt::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.welcome-txt::before {
+    background: #211D1B;
+    animation: load 2s steps(42) forwards;
+}
+
+@keyframes load {
+    to { left: 100%; }
+}
+
+.help-txt {
+    color: #506F95;
+}
+
+/* The input */
+#txt {
+  display: flex;
+  padding: 10px;
+}
+
+.txt-input {
+  margin-top: 1px;
+  margin-left: 7px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #506F95;
+  font-size: 1em;
+}
+
+/* Cursor */
+
+.cursor {
+  position: relative;
+}
+.cursor i {
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  background-color: gray;
+  left: 5px;
+  top: 10%;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.cursor input:focus + i {
+  display: none;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.cmd-txt  {
+  color: #506F95;
+}
+
+.added-task {
+  color: #64e986;
+}
+.removed-task {
+  color: #DB6A6C;
+}
+
+.listed-task {
+  color: #506F95;
+}
+
+a {
+  text-decoration: none;
+  color: #506F95;
+  transition: .3s;
+}
+
+a:hover {
+  color: #64e986;
+}
