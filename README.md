@@ -1,6 +1,19 @@
-# CmDoo
-This is my take on a simple practice project, 
-I am still learning Java Script so i wanted to practice and create a to do list, but i also wanted to put my little spin on it so i diceded to create the to do list but make it look and feel like you are working in a cmd.This took quite some time considering i am new at this. So dont judge me too hard : ) if i have messed something up also still learning how to use github and im sorry if this isn't set up porperly. Anyway i hope you will like my website and enjoy it.
+### ⚡ Tufo
+Project Made By Tufo.
+---
 
-Here is the link if you want to check it out for yourself.
-https://cm-doo.vercel.app/
+# 💻 CmDoo
+CmDoo is a take on a simple ToDo practice project, but with my little spin on it. So i am still learning JavaScript and i saw that one of the practice projects was a To Do list. So i decided to make just that but styled like a terminal. It took quite some time to make this project because as i said i am still learning : ). I hope you will like and enjoy my Terminal Styled To Do List. And if you want to check the website out for yourself here is the link: https://cm-doo.vercel.app/
+
+# I Made This Website With
+
+- HTML
+- CSS
+- JavaScript
+
+
+
+
+
+
+Also quite new at this github thing so im not sure if i have everything set up the way it is supossed to be.
