@@ -2,7 +2,7 @@ let input = document.querySelector('.txt-input');
 let content = document.querySelector('.content');
 let clear = document.getElementsByClassName('.clear');
 
-let todos = [];
+let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 input.addEventListener('keydown', handleCommand);
 
@@ -18,7 +18,7 @@ function handleCommand(event) {
 function executeCommand(command) {
     switch (command) {
         case "help":
-            content.innerHTML += '<p class="dummy-txt">Available commands: <span class="cmd-txt">help</span>, <span class="cmd-txt">addToDo</span>, <span class="cmd-txt">removeToDo</span>, <span class="cmd-txt">listToDo</span>, <span class="cmd-txt">clear</span>, <span class="cmd-txt">aboutMe .</span></p><br>';
+            content.innerHTML += '<p class="dummy-txt">Available commands: <span class="cmd-txt">help</span>, <span class="cmd-txt">addToDo</span>, <span class="cmd-txt">removeToDo</span>, <span class="cmd-txt">listToDo</span>, <span class="cmd-txt">clear</span>, <span class="cmd-txt">updates</span>, <span class="cmd-txt">aboutMe .</span></p><br>';
             break;
         case "addToDo":
             content.innerHTML += "Enter task: <br>";
@@ -62,6 +62,22 @@ function executeCommand(command) {
             content.appendChild(aboutMe);
             input.value = '';
             break;
+          case "updates":
+            let updates = document.createElement('div');
+            updates.classList.add('about-me');
+            updates.innerHTML =
+            `
+            <span class="about-txt"> 
+            Updates:<br>
+            Commands: Updates it displays the added updates to my todo-list .<br>
+            Other Updates: added localStorage to the todos so they do not get deleted when refreshed<br>
+            or when you leave the pade .
+            </span>
+            `
+
+            content.appendChild(updates);
+            input.value = '';
+          break;
         default:
             content.innerHTML += `Unknown command: ${command}, for a list of commands type help.<br>`;
     }
@@ -73,7 +89,9 @@ function handleAddTask(event) {
       if (task !== "") {
         todos.push(task);
         content.innerHTML += `<span class="added-task">Task added: ${task}</span><br>`;
-        input.value = '';
+        input.value = '';  
+
+        localStorage.setItem('todos', JSON.stringify(todos));
       }
       input.removeEventListener("keydown", handleAddTask);
       input.addEventListener("keydown", handleCommand);
@@ -91,6 +109,8 @@ function handleAddTask(event) {
         todos.splice(index, 1);
         content.innerHTML += `<span class="removed-task">Task removed: ${task}</span><br>`;
         input.value = '';
+
+        localStorage.setItem('todos', JSON.stringify(todos));
       }
       input.removeEventListener("keydown", handleRemoveTask);
       input.addEventListener("keydown", handleCommand);
