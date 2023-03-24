@@ -11,9 +11,8 @@ CmDoo is a take on a simple ToDo practice project, but with my little spin on it
 - CSS
 - JavaScript
 
+#
 
-
-
-
-
-Also quite new at this github thing so im not sure if i have everything set up the way it is supossed to be.
+Added Updates:
+- updates command that lists the new updates
+- added localStorage so your tasks do not get deleted
