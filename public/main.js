@@ -51,9 +51,10 @@ function executeCommand(command) {
             aboutMe.innerHTML =
             `
             <span class="about-txt">Hello visitor,<br> My name is Tufo. I am a web developer who is fairly new at this,<br>
-            but i do my best to create fun web sites like this one . I also make youtube videos about my journey,<br>
-            I also make dev vlogs while making my projects so i can get feedback about my project because like i said<br>
-            I am fairly new at this, I also have some video tutorials about web development.<br>
+            but i do my best to create fun web sites like this one . I also <br>
+            make youtube videos about my journey, so i can get feedback about <br>
+            my project because like i said I am fairly new at this, I make my<br> 
+            websites with HTML CSS and JavaScript. Hope you enjoyed this website.<br>
             You can check my youtube channel here: <a href="https://www.youtube.com/channel/UCcvan4b4UrAXDT3mPv5hbuw" target="_blank">https://www.youtube.com/channel/UCcvan4b4UrAXDT3mPv5hbuw</a>.<br>
             You can also check my GitHub page here: <a href="https://github.com/TufoT" target="_blank">https://github.com/TufoT</a><br>
               </div>
