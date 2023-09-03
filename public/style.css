@@ -139,3 +139,21 @@ a {
 a:hover {
   color: #64e986;
 }
+
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+    
+    .art {
+        font-size: 1em;
+    }
+
+    .txtt {
+        font-size: 0.7em;
+    }
+
+    .txt-input {
+        font-size: 0.7em;
+    }
+}
